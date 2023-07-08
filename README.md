@@ -1,6 +1,6 @@
 # eLib
 
-This is a simple library application I wrote using purely Electron and Node.js as a small project.
+This is a simple library application inspired from Apple iBooks I wrote using purely Electron and Node.js as a small project.
 
 You can add, remove and open PDFs. It uses a JSON file to keep track of book names, paths, and thumnail images (encoded as base64). 
 
@@ -16,3 +16,6 @@ Once you have the dependencies installed, simply run:
 
 `npm start`
 
+## How it looks
+
+![](./doc/img/scshot.png)

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>eLib</title>
+	<link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./resources/styles/base.css">
+</head>
+
+<body>
+	<div class="container mb-5" style="padding-top:5%;">
+		<div class="row">
+			<div class="col-12">
+				<img src="./resources/logo.png" width="100px" height="100px" style="float:left;">
+				<h1 style="padding-top:5%;">eLib</h1>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-12">
+				<p>
+					Running on
+					<span class="text-muted">Node.js</span>: <b id="node-version"></b>,
+					<span class="text-muted">Chromium</span>: <b id="chrome-version"></b>,
+					and <span class="text-muted">Electron</span>: <b id="electron-version"></b>.
+				</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-12">
+				<form action="./catalog.html">
+					<button class="btn btn-primary">Go to Catalog</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+
+<script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./index.js"></script>
+
+</html>

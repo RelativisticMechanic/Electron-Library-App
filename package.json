@@ -1,0 +1,21 @@
+{
+  "name": "elib",
+  "version": "1.0.0",
+  "description": "A library catalog application for PDFs.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Siddharth Gautam",
+  "license": "MIT",
+  "dependencies": {
+    "@electron/remote": "^2.0.10",
+    "electron": "^25.2.0",
+    "jquery": "^3.7.0"
+  },
+  "devDependencies": {
+    "@electron/remote": "^2.0.10",
+    "electron-packager": "^17.1.1"
+  }
+}

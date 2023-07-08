@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'eLibFont';
+    src: url('../font.ttf');
+}
+
+body
+{
+    font-family: 'eLibFont';
+}
