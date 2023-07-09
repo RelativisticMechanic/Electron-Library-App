@@ -5,19 +5,65 @@
     <meta charset="UTF-8">
     <title>eLib Catalog</title>
     <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./resources/styles/base.css">
     <link rel="stylesheet" href="./bower_components/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="./resources/styles/base.css">
+
+    <style>
+        body {
+            background-color: rgb(40, 40, 50);
+            color: white;
+        }
+
+        .btn-titlebar {
+            height: 100%;
+            width: 4%;
+            color: white;
+        }
+
+        .btn-minimize:hover
+        {
+            background-color: gray;
+        }
+
+        .btn-x:hover
+        {
+            background-color: red;
+        }
+
+        .navbar {
+            background-color: rgb(38, 38, 38);
+        }
+
+        .zero-pad {
+            padding: 0 0 0 0;
+            margin: 0 0 0 0;
+        }
+    </style>
 </head>
 
 <body>
-    <h1 style="padding-top:2%;text-align:center;">Library Catalog</h1>
-    <div class="container">
+    <nav class="navbar navbar-dark zero-pad">
+        <div class="container-fluid zero-pad justify-content-end">
+            <button class="btn btn-titlebar btn-minimize btn-sm rounded-0"
+                onClick="minimizeApplication()"><span class="fa fa-sm fa-minus"></span></button>
+            <button class="btn btn-titlebar btn-sm btn-x rounded-0" onClick="quitApplication()"><span
+                    class="fa fa-sm fa-x"></span></button>
+        </div>
+    </nav>
+
+    <div class="container" style="padding-top:2%;padding-bottom:5%;">
+        <img src="./resources/logo.png" width="100px" height="100px" style="float:left;">
+        <h1>Catalog</h1>
+    </div>
+
+    <div class="container" data-bs-theme="dark">
         <div class="'row">
             <div class="col-12" style="padding-bottom:3%">
-                <button class="btn btn-lg btn-outline-success" onClick="addBookToCatalog()"><span class="fa fa-lg fa-plus"></span> <b>Add a PDF</b></button>
+                <button class="btn btn-lg btn-success" onClick="addBookToCatalog()"><span
+                        class="fa fa-lg fa-plus"></span> <b>Add a PDF</b></button>
             </div>
         </div>
-        <div class="row" id="books_catalog">
+        <div class="row catalog" style="height:600px;padding-bottom:100px;" id="books_catalog">
         </div>
 
     </div>

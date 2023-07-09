@@ -6,14 +6,15 @@ remoteMain.initialize();
 const createWindow = () => {
     const win = new BrowserWindow({
         show: false,
-        //titleBarStyle: 'hidden',
+        titleBarStyle: 'hidden',
+        icon: path.join(__dirname, 'resources/logo.ico'),
         webPreferences: {
             nodeIntegration: true,
             contextIsolation: false,
         }
     });
     win.maximize();
-    win.loadFile("index.html");
+    win.loadFile("catalog.html");
     remoteMain.enable(win.webContents);
 }
 

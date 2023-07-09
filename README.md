@@ -10,7 +10,7 @@ The interface is clean, although it has a few bugs if the path names become tric
 
 The Node dependencies are `electron`, `electron/remote`, `jquery` and `bowser`. The `bowser` dependencies include `bootstrap` and `font-awesome`.
 
-In addition, the program calls a Python3 script which gets the base64 thumbnail and pages of the PDF, it uses `PyMuPDF` as a dependency.
+In addition, the program calls a Python3 script which gets the base64 thumbnail and pages of the PDF, it uses `PyMuPDF` as a dependency. An EXE for windows has been built using py2exe and is located in resources/bin/pdf-tnail.exe.
 
 Once you have the dependencies installed, simply run:
 

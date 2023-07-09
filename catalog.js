@@ -10,8 +10,8 @@ var booksLeftToAdd = 0;
 
 function createCatalogCard(book_name, book_description, book_image, book_path) {
     var catalog_card = "";
-    catalog_card += '<div class="col-2 d-flex align-items-stretch" style="flex-grow:1;flex-basis:0">'
-    catalog_card += '<div class="card shadow-sm mb-5">';
+    catalog_card += '<div class="col-3 d-flex align-items-stretch">'
+    catalog_card += '<div class="card shadow-sm mb-5" style="width:18rem;">';
     catalog_card += '<img src="data:image/jpeg;charset=utf-8;base64,' + book_image + '" class="card-img-top" alt="...">';
     catalog_card += '<div class="card-body">';
     catalog_card += '<h5 class="card-title">' + book_name + '</h5>';
@@ -70,7 +70,7 @@ function addBookToCatalog() {
         pdfFileList = files["filePaths"];
         booksLeftToAdd = pdfFileList.length;
         for (let pdfName of pdfFileList) {
-            exec('python pdf-tnail.py \"' + pdfName + "\"", (error, stdout, stderr, fileName = pdfName) => {
+            exec(path.join(__dirname, 'resources/bin/pdf-tnail.exe') + ' \"' + pdfName + "\"", (error, stdout, stderr, fileName = pdfName) => {
                 json_data = JSON.parse(stdout)
                 var image_thumbail = json_data["thumbnail"];
                 var pages = json_data["pages"];
@@ -106,3 +106,15 @@ function openPDF(book_path)
 $(document).ready(() => {
     loadfromJSON();
 });
+
+function quitApplication()
+{
+    var window = remote.getCurrentWindow();
+    window.close();
+}
+
+function minimizeApplication()
+{
+    var window = remote.getCurrentWindow();
+    window.minimize();
+}
